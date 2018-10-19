@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package credito_interfaz;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author Estudiante
@@ -113,9 +113,17 @@ public class inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void abrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abrirActionPerformed
-        Interfaz abrir=new Interfaz();
+        int a;
+        a=Integer.parseInt(this.año.getItemAt(0 && 23));
+        
+        if(a<=2000){
+            Interfaz abrir=new Interfaz();
             abrir.setVisible(true);
             dispose();
+        }else{
+            JOptionPane.showMessageDialog(null,"Usted es menor de edad, no puede acceder a un credito");
+        }
+        
                 
     }//GEN-LAST:event_abrirActionPerformed
 
