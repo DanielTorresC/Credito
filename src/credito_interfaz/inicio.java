@@ -116,6 +116,7 @@ public class inicio extends javax.swing.JFrame {
         Interfaz abrir=new Interfaz();
             abrir.setVisible(true);
             dispose();
+            
     }//GEN-LAST:event_abrirActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
