@@ -42,16 +42,21 @@ public class bancolombia extends javax.swing.JFrame {
         meses = new javax.swing.JTextField();
         destino = new javax.swing.JComboBox<>();
         totalm = new javax.swing.JTextField();
+        iconc = new javax.swing.JLabel();
+        fondoc = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Bancolombia");
-        setSize(new java.awt.Dimension(490, 420));
+        setPreferredSize(new java.awt.Dimension(490, 520));
+        setSize(new java.awt.Dimension(490, 520));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         totalc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 totalcActionPerformed(evt);
             }
         });
+        getContentPane().add(totalc, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 157, -1));
 
         calcular.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         calcular.setText("CALCULAR");
@@ -61,6 +66,7 @@ public class bancolombia extends javax.swing.JFrame {
                 calcularActionPerformed(evt);
             }
         });
+        getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
 
         interes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,8 +78,10 @@ public class bancolombia extends javax.swing.JFrame {
                 interesKeyTyped(evt);
             }
         });
+        getContentPane().add(interes, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 159, -1));
 
         jLabel4.setText("Interes del credito: ");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
 
         jButton2.setText("Limpiar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -81,16 +89,23 @@ public class bancolombia extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
 
         jLabel7.setText("Cuota mesual con interes:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
 
         jLabel2.setText("Valor del credito:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
 
         jLabel5.setText("Valor total del credito:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
+        getContentPane().add(valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 159, -1));
 
         jLabel3.setText("Meses a diferir el credito: ");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
 
         jLabel1.setText("Destino del credito:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
 
         jButton1.setText("Salir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -98,12 +113,14 @@ public class bancolombia extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, -1, -1));
 
         meses.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mesesActionPerformed(evt);
             }
         });
+        getContentPane().add(meses, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 159, -1));
 
         destino.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Educativo", "Vehiculo", "Vivienda", "Libre inversion" }));
         destino.addActionListener(new java.awt.event.ActionListener() {
@@ -111,94 +128,20 @@ public class bancolombia extends javax.swing.JFrame {
                 destinoActionPerformed(evt);
             }
         });
+        getContentPane().add(destino, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, -1, -1));
 
         totalm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 totalmActionPerformed(evt);
             }
         });
+        getContentPane().add(totalm, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 158, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel1)
-                            .addGap(51, 51, 51)
-                            .addComponent(destino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel2)
-                            .addGap(64, 64, 64)
-                            .addComponent(valor, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel3)
-                            .addGap(13, 13, 13)
-                            .addComponent(meses, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel4)
-                            .addGap(51, 51, 51)
-                            .addComponent(interes, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(160, 160, 160)
-                            .addComponent(calcular))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel5)
-                            .addGap(36, 36, 36)
-                            .addComponent(totalc, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel7)
-                            .addGap(12, 12, 12)
-                            .addComponent(totalm, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(50, 50, 50)
-                            .addComponent(jButton2)
-                            .addGap(227, 227, 227)
-                            .addComponent(jButton1)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel1)
-                        .addComponent(destino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(14, 14, 14)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel2)
-                        .addComponent(valor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(16, 16, 16)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel3)
-                        .addComponent(meses, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(16, 16, 16)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel4)
-                        .addComponent(interes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(6, 6, 6)
-                    .addComponent(calcular)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel5)
-                        .addComponent(totalc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(16, 16, 16)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel7)
-                        .addComponent(totalm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(26, 26, 26)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton2)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(jButton1)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        iconc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/bancolom.png"))); // NOI18N
+        getContentPane().add(iconc, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 290, 70));
+
+        fondoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/bancocolo.jpg"))); // NOI18N
+        getContentPane().add(fondoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(-590, -410, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -292,6 +235,8 @@ public class bancolombia extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton calcular;
     private javax.swing.JComboBox<String> destino;
+    private javax.swing.JLabel fondoc;
+    private javax.swing.JLabel iconc;
     private javax.swing.JTextField interes;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

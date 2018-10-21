@@ -15,6 +15,7 @@ public class bbva extends javax.swing.JFrame {
     public bbva() {
         initComponents();
         this.setLocationRelativeTo(null);
+       
         //esto es una prueba
     }
 
@@ -49,7 +50,7 @@ public class bbva extends javax.swing.JFrame {
         setTitle("BBVA");
         setBounds(new java.awt.Rectangle(0, 0, 490, 420));
         setMinimumSize(new java.awt.Dimension(490, 420));
-        setPreferredSize(new java.awt.Dimension(490, 420));
+        setPreferredSize(new java.awt.Dimension(490, 520));
         setSize(new java.awt.Dimension(490, 420));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -57,14 +58,12 @@ public class bbva extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
         valor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        valor.setForeground(new java.awt.Color(0, 0, 0));
         getContentPane().add(valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 159, -1));
 
         jLabel3.setText("Meses a diferir el credito: ");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
         meses.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        meses.setForeground(new java.awt.Color(0, 0, 0));
         meses.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mesesActionPerformed(evt);
@@ -76,7 +75,6 @@ public class bbva extends javax.swing.JFrame {
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
 
         interes.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        interes.setForeground(new java.awt.Color(0, 0, 0));
         interes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 interesActionPerformed(evt);
@@ -100,7 +98,6 @@ public class bbva extends javax.swing.JFrame {
         getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, -1, -1));
 
         totalc.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        totalc.setForeground(new java.awt.Color(0, 0, 0));
         totalc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 totalcActionPerformed(evt);
@@ -115,7 +112,6 @@ public class bbva extends javax.swing.JFrame {
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, -1, -1));
 
         totalm.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        totalm.setForeground(new java.awt.Color(0, 0, 0));
         totalm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 totalmActionPerformed(evt);
@@ -140,13 +136,12 @@ public class bbva extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 430, -1, -1));
 
         iconp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/BBVA.jpg"))); // NOI18N
-        getContentPane().add(iconp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 100));
+        getContentPane().add(iconp, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 490, 100));
 
         jLabel1.setText("Destino del credito:");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
 
         opcion.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        opcion.setForeground(new java.awt.Color(0, 0, 0));
         opcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Educativo", "Vehiculo", "Vivienda", "Libre inversion" }));
         opcion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
