@@ -5,6 +5,8 @@
  */
 package credito_interfaz;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author HAN
@@ -28,22 +30,23 @@ public class bancolombia extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        totalc = new javax.swing.JTextField();
-        calcular = new javax.swing.JButton();
-        interes = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        valor = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        meses = new javax.swing.JTextField();
-        destino = new javax.swing.JComboBox<>();
-        totalm = new javax.swing.JTextField();
         iconc = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        valor = new javax.swing.JTextField();
+        meses = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        interes = new javax.swing.JTextField();
+        calcular = new javax.swing.JButton();
+        totalc = new javax.swing.JTextField();
+        totalm = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        opcion = new javax.swing.JComboBox<>();
+        jButton3 = new javax.swing.JButton();
         fondoc = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,23 +55,37 @@ public class bancolombia extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(490, 520));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        totalc.addActionListener(new java.awt.event.ActionListener() {
+        iconc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/bancolom.png"))); // NOI18N
+        getContentPane().add(iconc, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 290, 70));
+
+        jLabel1.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel1.setText("Destino del credito:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
+
+        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel2.setText("Valor del credito:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
+
+        valor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        getContentPane().add(valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 159, -1));
+
+        meses.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        meses.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                totalcActionPerformed(evt);
+                mesesActionPerformed(evt);
             }
         });
-        getContentPane().add(totalc, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 157, -1));
+        getContentPane().add(meses, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 159, -1));
 
-        calcular.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        calcular.setText("CALCULAR");
-        calcular.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        calcular.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calcularActionPerformed(evt);
-            }
-        });
-        getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
+        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel3.setText("Meses a diferir el credito: ");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
 
+        jLabel4.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel4.setText("Interes del credito: ");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+
+        interes.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         interes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 interesActionPerformed(evt);
@@ -79,10 +96,33 @@ public class bancolombia extends javax.swing.JFrame {
                 interesKeyTyped(evt);
             }
         });
-        getContentPane().add(interes, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 159, -1));
+        getContentPane().add(interes, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 159, -1));
 
-        jLabel4.setText("Interes del credito: ");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
+        calcular.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        calcular.setText("CALCULAR");
+        calcular.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        calcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcularActionPerformed(evt);
+            }
+        });
+        getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, -1, -1));
+
+        totalc.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        totalc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                totalcActionPerformed(evt);
+            }
+        });
+        getContentPane().add(totalc, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 157, -1));
+
+        totalm.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        totalm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                totalmActionPerformed(evt);
+            }
+        });
+        getContentPane().add(totalm, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, 158, -1));
 
         jButton2.setText("Limpiar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -90,23 +130,7 @@ public class bancolombia extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
-
-        jLabel7.setText("Cuota mesual con interes:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
-
-        jLabel2.setText("Valor del credito:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
-
-        jLabel5.setText("Valor total del credito:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
-        getContentPane().add(valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 159, -1));
-
-        jLabel3.setText("Meses a diferir el credito: ");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
-
-        jLabel1.setText("Destino del credito:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, -1, -1));
 
         jButton1.setText("Salir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -114,35 +138,35 @@ public class bancolombia extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, -1, -1));
 
-        meses.addActionListener(new java.awt.event.ActionListener() {
+        jLabel7.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel7.setText("Cuota mesual con interes:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
+
+        jLabel5.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel5.setText("Valor total del credito:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
+
+        opcion.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        opcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Educativo", "Vehiculo", "Vivienda", "Libre inversion" }));
+        opcion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mesesActionPerformed(evt);
+                opcionActionPerformed(evt);
             }
         });
-        getContentPane().add(meses, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 159, -1));
+        getContentPane().add(opcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, -1, -1));
 
-        destino.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Educativo", "Vehiculo", "Vivienda", "Libre inversion" }));
-        destino.addActionListener(new java.awt.event.ActionListener() {
+        jButton3.setText("Atras");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                destinoActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(destino, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, -1, -1));
-
-        totalm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                totalmActionPerformed(evt);
-            }
-        });
-        getContentPane().add(totalm, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 158, -1));
-
-        iconc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/bancolom.png"))); // NOI18N
-        getContentPane().add(iconc, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 290, 70));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
 
         fondoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/bancocolo.jpg"))); // NOI18N
-        getContentPane().add(fondoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(-590, -410, -1, -1));
+        getContentPane().add(fondoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1080, -30, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -198,6 +222,33 @@ public class bancolombia extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_totalmActionPerformed
 
+    private void opcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcionActionPerformed
+        String o=(String)opcion.getSelectedItem();
+
+        if(o.equals("Vehiculo")){
+            interes.setEditable(false);
+            interes.setText("0.98");
+        }else if(o.equals("Educativo")){
+            interes.setEditable(false);
+            interes.setText("1.2");
+        }else if(o.equals("Libre inversion")){
+            interes.setEditable(false);
+            interes.setText(("2.04"));
+        }else if(o.equals("Vivienda")){
+            interes.setEditable(false);
+            interes.setText("1.45");
+        }else{
+            JOptionPane.showMessageDialog(null,"Debe selecionar el destino de su credito");
+
+        }
+    }//GEN-LAST:event_opcionActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        inicio abrir=new inicio();
+        abrir.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -235,12 +286,12 @@ public class bancolombia extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton calcular;
-    private javax.swing.JComboBox<String> destino;
     private javax.swing.JLabel fondoc;
     private javax.swing.JLabel iconc;
     private javax.swing.JTextField interes;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -248,6 +299,7 @@ public class bancolombia extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField meses;
+    private javax.swing.JComboBox<String> opcion;
     private javax.swing.JTextField totalc;
     private javax.swing.JTextField totalm;
     private javax.swing.JTextField valor;
