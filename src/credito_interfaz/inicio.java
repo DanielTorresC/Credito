@@ -96,21 +96,33 @@ public class inicio extends javax.swing.JFrame {
     private void abrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abrirActionPerformed
         n =nombre.getText();
         // El nombre de la variable para que en las demas pantallas se pueda tomar el tomar el campo del nombre//
+        String opa=(String)año.getSelectedItem();
+        String opm=(String)mes.getSelectedItem();
+        String opd=(String)dia.getSelectedItem();
+        
+        if(opa.equals("Año...")){
+            JOptionPane.showMessageDialog(null,"Debe seleccionar un año");
+        }else if(opm.equals("Mes...")){
+            JOptionPane.showMessageDialog(null,"Debe seleccionar un mes");
+        }else if(opd.equals("Dia...")){
+            JOptionPane.showMessageDialog(null,"Debe seleccionar un dia");
+        }
+        
         int a=0,m=0,d=0;
         
         a=Integer.parseInt((String)año.getSelectedItem());
         m=Integer.parseInt((String)mes.getSelectedItem());
         d=Integer.parseInt((String)dia.getSelectedItem());
         
-        int anioR=Math.abs(a-anioA);
+        int anioR=anioA-a;
         int mesR=mesA-m;
         int diaR=diaA-d;
         
-        
-        
         if(anioR<=18 && mesR<=0 && diaR<=0){
             JOptionPane.showMessageDialog(null,"Usted es menor de edad, no puede acceder a un credito");
-        }else{
+        }else if(anioR<18){
+            JOptionPane.showMessageDialog(null,"Usted es menor de edad, no puede acceder a un credito");
+        }else {
             String op=(String)banco.getSelectedItem();
             if(op.equals("BBVA")){
                 bbva abrir=new bbva();
@@ -131,7 +143,7 @@ public class inicio extends javax.swing.JFrame {
             }else{
                 JOptionPane.showMessageDialog(null,"Debe seleccionar un banco");
             }
-        }    
+        }
     }//GEN-LAST:event_abrirActionPerformed
 
     private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
