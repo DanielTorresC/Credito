@@ -1,6 +1,8 @@
 
 package credito_interfaz;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author HAN,
@@ -40,7 +42,7 @@ public class bbva extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         iconp = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        opcion = new javax.swing.JComboBox<>();
         fondop = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,11 +55,16 @@ public class bbva extends javax.swing.JFrame {
 
         jLabel2.setText("Valor del credito:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
+
+        valor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        valor.setForeground(new java.awt.Color(0, 0, 0));
         getContentPane().add(valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 159, -1));
 
         jLabel3.setText("Meses a diferir el credito: ");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
+        meses.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        meses.setForeground(new java.awt.Color(0, 0, 0));
         meses.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mesesActionPerformed(evt);
@@ -68,6 +75,8 @@ public class bbva extends javax.swing.JFrame {
         jLabel4.setText("Interes del credito: ");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
 
+        interes.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        interes.setForeground(new java.awt.Color(0, 0, 0));
         interes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 interesActionPerformed(evt);
@@ -90,6 +99,8 @@ public class bbva extends javax.swing.JFrame {
         });
         getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, -1, -1));
 
+        totalc.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        totalc.setForeground(new java.awt.Color(0, 0, 0));
         totalc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 totalcActionPerformed(evt);
@@ -103,6 +114,8 @@ public class bbva extends javax.swing.JFrame {
         jLabel7.setText("Cuota mesual con interes:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, -1, -1));
 
+        totalm.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        totalm.setForeground(new java.awt.Color(0, 0, 0));
         totalm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 totalmActionPerformed(evt);
@@ -127,13 +140,20 @@ public class bbva extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 430, -1, -1));
 
         iconp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/BBVA.jpg"))); // NOI18N
-        getContentPane().add(iconp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 100));
+        getContentPane().add(iconp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 100));
 
         jLabel1.setText("Destino del credito:");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Educativo", "Vehiculo", "Vivienda", "Libre inversion" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, -1, -1));
+        opcion.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        opcion.setForeground(new java.awt.Color(0, 0, 0));
+        opcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Educativo", "Vehiculo", "Vivienda", "Libre inversion" }));
+        opcion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opcionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(opcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, -1, -1));
 
         fondop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/bba.jpg"))); // NOI18N
         getContentPane().add(fondop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 540));
@@ -146,7 +166,7 @@ public class bbva extends javax.swing.JFrame {
     }//GEN-LAST:event_mesesActionPerformed
 
     private void interesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_interesActionPerformed
-        interes.setVisible(false);        // TODO add your handling code here:
+        
     }//GEN-LAST:event_interesActionPerformed
 
     private void interesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_interesKeyTyped
@@ -165,6 +185,7 @@ public class bbva extends javax.swing.JFrame {
 
         totalc.setText(String.valueOf(tc));
         totalm.setText(String.valueOf(tm));
+        
     }//GEN-LAST:event_calcularActionPerformed
 
     private void totalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalcActionPerformed
@@ -187,6 +208,27 @@ public class bbva extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void opcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcionActionPerformed
+        String o=(String)opcion.getSelectedItem();
+        
+        if(o.equals("Vehiculo")){
+            interes.setEditable(false);
+            interes.setText("0.98");
+        }else if(o.equals("Educativo")){
+            interes.setEditable(false);
+            interes.setText("1.2");
+        }else if(o.equals("Libre inversion")){
+            interes.setEditable(false);
+            interes.setText(("2.04"));
+        }else if(o.equals("Vivienda")){
+            interes.setEditable(false);
+            interes.setText("1.45");
+        }else{
+            JOptionPane.showMessageDialog(null,"Debe selecionar el destino de su credito");
+
+        }
+    }//GEN-LAST:event_opcionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -230,7 +272,6 @@ public class bbva extends javax.swing.JFrame {
     private javax.swing.JTextField interes;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -238,6 +279,7 @@ public class bbva extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField meses;
+    private javax.swing.JComboBox<String> opcion;
     private javax.swing.JTextField totalc;
     private javax.swing.JTextField totalm;
     private javax.swing.JTextField valor;
