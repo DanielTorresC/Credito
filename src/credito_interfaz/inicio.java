@@ -1,4 +1,8 @@
 package credito_interfaz;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import javax.swing.JOptionPane;
 
 public class inicio extends javax.swing.JFrame {
@@ -19,9 +23,10 @@ public class inicio extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         nombre = new javax.swing.JTextField();
         año = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        mes = new javax.swing.JComboBox<>();
+        dia = new javax.swing.JComboBox<>();
         banco = new javax.swing.JComboBox<>();
+        fechaA = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,7 +62,7 @@ public class inicio extends javax.swing.JFrame {
         });
         getContentPane().add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 166, -1));
 
-        año.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997" }));
+        año.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Año...", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1864", "1963", "1962", "1961", "1960" }));
         año.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 añoActionPerformed(evt);
@@ -65,11 +70,11 @@ public class inicio extends javax.swing.JFrame {
         });
         getContentPane().add(año, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, -1, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Enero\t", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" }));
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, -1, -1));
+        mes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mes...", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
+        getContentPane().add(mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, -1, -1));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-        getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, -1, -1));
+        dia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dia...", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        getContentPane().add(dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, -1, -1));
 
         banco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "BBVA", "Bancolombia", "Banco Caja Social", "Banco Pichincha" }));
         banco.addActionListener(new java.awt.event.ActionListener() {
@@ -78,21 +83,34 @@ public class inicio extends javax.swing.JFrame {
             }
         });
         getContentPane().add(banco, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 166, -1));
+        getContentPane().add(fechaA, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 20, 80, 20));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/slide-agustiniana-1.jpg"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 590, 220));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+        
+        Calendar cal =new GregorianCalendar();
+        int mesA=cal.get(Calendar.MONTH),anioA=cal.get(Calendar.YEAR),diaA=cal.get(Calendar.DAY_OF_MONTH);
     private void abrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abrirActionPerformed
         n =nombre.getText();
         // El nombre de la variable para que en las demas pantallas se pueda tomar el tomar el campo del nombre//
-        int a=0;
+        int a=0,m=0,d=0;
         
         a=Integer.parseInt((String)año.getSelectedItem());
+        m=Integer.parseInt((String)mes.getSelectedItem());
+        d=Integer.parseInt((String)dia.getSelectedItem());
         
-        if(a<=2000){
+        int anioR=Math.abs(a-anioA);
+        int mesR=mesA-m;
+        int diaR=diaA-d;
+        
+        
+        
+        if(anioR<=18 && mesR<=0 && diaR<=0){
+            JOptionPane.showMessageDialog(null,"Usted es menor de edad, no puede acceder a un credito");
+        }else{
             String op=(String)banco.getSelectedItem();
             if(op.equals("BBVA")){
                 bbva abrir=new bbva();
@@ -112,15 +130,8 @@ public class inicio extends javax.swing.JFrame {
                 dispose();
             }else{
                 JOptionPane.showMessageDialog(null,"Debe seleccionar un banco");
-
             }
-        }else{
-            JOptionPane.showMessageDialog(null,"Usted es menor de edad, no puede acceder a un credito");
-        }
-        
-        
-        
-                
+        }    
     }//GEN-LAST:event_abrirActionPerformed
 
     private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
@@ -174,12 +185,13 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JButton abrir;
     private javax.swing.JComboBox<String> año;
     private javax.swing.JComboBox<String> banco;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> dia;
+    private javax.swing.JLabel fechaA;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JComboBox<String> mes;
     private javax.swing.JTextField nombre;
     // End of variables declaration//GEN-END:variables
 }

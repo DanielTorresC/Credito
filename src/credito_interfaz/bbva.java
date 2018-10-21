@@ -44,6 +44,7 @@ public class bbva extends javax.swing.JFrame {
         opcion = new javax.swing.JComboBox<>();
         iconp = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        atras = new javax.swing.JButton();
         fondop = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -125,7 +126,7 @@ public class bbva extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, -1, -1));
 
         jButton1.setText("Salir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -133,7 +134,7 @@ public class bbva extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 430, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, -1, -1));
 
         opcion.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         opcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Educativo", "Vehiculo", "Vivienda", "Libre inversion" }));
@@ -149,6 +150,14 @@ public class bbva extends javax.swing.JFrame {
 
         jLabel1.setText("Destino del credito:");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+
+        atras.setText("Atras");
+        atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(atras, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, -1));
 
         fondop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/blue.png"))); // NOI18N
         getContentPane().add(fondop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 490, 540));
@@ -180,6 +189,8 @@ public class bbva extends javax.swing.JFrame {
 
         totalc.setText(String.valueOf(tc));
         totalm.setText(String.valueOf(tm));
+        totalc.setEditable(false);
+        totalm.setEditable(false);
         
     }//GEN-LAST:event_calcularActionPerformed
 
@@ -225,6 +236,12 @@ public class bbva extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_opcionActionPerformed
 
+    private void atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasActionPerformed
+        inicio abrir=new inicio();
+        abrir.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_atrasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -261,6 +278,7 @@ public class bbva extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton atras;
     private javax.swing.JButton calcular;
     private javax.swing.JLabel fondop;
     private javax.swing.JLabel iconp;

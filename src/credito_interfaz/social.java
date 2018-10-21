@@ -52,6 +52,7 @@ public class social extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         nombre = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        atras = new javax.swing.JButton();
         fondos = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -133,7 +134,7 @@ public class social extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, -1, -1));
 
         jButton3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jButton3.setText("Salir");
@@ -153,7 +154,15 @@ public class social extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 100, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 390, 100, -1));
+
+        atras.setText("Atras");
+        atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(atras, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, -1, -1));
 
         fondos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/cajasocial1.jpg"))); // NOI18N
         getContentPane().add(fondos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 521, 490));
@@ -224,6 +233,12 @@ public class social extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasActionPerformed
+        inicio abrir=new inicio();
+        abrir.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_atrasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -260,6 +275,7 @@ public class social extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton atras;
     private javax.swing.JTextField credito;
     private javax.swing.JLabel fija;
     private javax.swing.JLabel fondos;

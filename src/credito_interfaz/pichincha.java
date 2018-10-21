@@ -51,6 +51,7 @@ public class pichincha extends javax.swing.JFrame {
         nombre = new javax.swing.JLabel();
         nombre1 = new javax.swing.JLabel();
         fija = new javax.swing.JLabel();
+        atras = new javax.swing.JButton();
         fondopp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -77,11 +78,11 @@ public class pichincha extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, -1, -1));
 
         educa.setBackground(new java.awt.Color(255, 255, 0));
         educa.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        educa.setText("educacion");
+        educa.setText("EDUCACION");
         educa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 educaActionPerformed(evt);
@@ -101,7 +102,7 @@ public class pichincha extends javax.swing.JFrame {
 
         vivi.setBackground(new java.awt.Color(255, 255, 0));
         vivi.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        vivi.setText("vivienda");
+        vivi.setText("VIVIENDA");
         vivi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viviActionPerformed(evt);
@@ -120,11 +121,13 @@ public class pichincha extends javax.swing.JFrame {
         getContentPane().add(libre, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel1.setText("meses a diferir el credito:");
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel1.setText("Meses a diferir el credito:");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 170, 20));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel2.setText("valor del credito:");
+        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel2.setText("Valor del credito:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 100, 20));
 
         meses.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
@@ -137,25 +140,36 @@ public class pichincha extends javax.swing.JFrame {
         getContentPane().add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 170, 20));
 
         total1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        total1.setText("total a pagar es:");
-        getContentPane().add(total1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 170, 20));
+        total1.setForeground(new java.awt.Color(51, 51, 51));
+        total1.setText("Total a pagar es:");
+        getContentPane().add(total1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 110, 20));
 
         fija1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        fija1.setText("cuota mensual es:");
-        getContentPane().add(fija1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 170, 20));
+        fija1.setForeground(new java.awt.Color(51, 51, 51));
+        fija1.setText("Cuota mensual es:");
+        getContentPane().add(fija1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 110, 20));
 
         testo.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
         getContentPane().add(testo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 460, 20));
 
         nombre.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        getContentPane().add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 200, 20));
+        getContentPane().add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 200, 20));
 
         nombre1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        nombre1.setText("reciba un cordial saludo señor ,ra ");
-        getContentPane().add(nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 320, 20));
+        nombre1.setForeground(new java.awt.Color(51, 51, 51));
+        nombre1.setText("Reciba un cordial saludo señor (a) ");
+        getContentPane().add(nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, 20));
 
         fija.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         getContentPane().add(fija, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 350, 170, 20));
+
+        atras.setText("Atras");
+        atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(atras, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, -1, -1));
 
         fondopp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/pichin1.jpg"))); // NOI18N
         getContentPane().add(fondopp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 520));
@@ -251,6 +265,12 @@ public class pichincha extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasActionPerformed
+        inicio abrir=new inicio();
+        abrir.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_atrasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -287,6 +307,7 @@ public class pichincha extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton atras;
     private javax.swing.JTextField credito;
     private javax.swing.JButton educa;
     private javax.swing.JLabel fija;
