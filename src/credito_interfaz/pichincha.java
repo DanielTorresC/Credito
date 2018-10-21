@@ -16,6 +16,7 @@ public class pichincha extends javax.swing.JFrame {
      */
     public pichincha() {
         initComponents();
+         this.setLocationRelativeTo(null);
     }
 
     /**

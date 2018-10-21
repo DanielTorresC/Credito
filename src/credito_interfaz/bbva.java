@@ -135,7 +135,7 @@ public class bbva extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 430, -1, -1));
 
-        iconp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/BBVA.jpg"))); // NOI18N
+        iconp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/bbvaic.png"))); // NOI18N
         getContentPane().add(iconp, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 490, 100));
 
         jLabel1.setText("Destino del credito:");
@@ -150,7 +150,7 @@ public class bbva extends javax.swing.JFrame {
         });
         getContentPane().add(opcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, -1, -1));
 
-        fondop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/bba.jpg"))); // NOI18N
+        fondop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/blue.png"))); // NOI18N
         getContentPane().add(fondop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 540));
 
         pack();

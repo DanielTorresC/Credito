@@ -16,6 +16,7 @@ public class bancolombia extends javax.swing.JFrame {
      */
     public bancolombia() {
         initComponents();
+         this.setLocationRelativeTo(null);
     }
 
     /**

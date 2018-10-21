@@ -16,6 +16,7 @@ public class social extends javax.swing.JFrame {
      */
     public social() {
         initComponents();
+         this.setLocationRelativeTo(null);
     }
 
     /**
