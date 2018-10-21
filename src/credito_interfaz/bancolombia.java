@@ -57,7 +57,7 @@ public class bancolombia extends javax.swing.JFrame {
                 totalcActionPerformed(evt);
             }
         });
-        getContentPane().add(totalc, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 157, -1));
+        getContentPane().add(totalc, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 157, -1));
 
         calcular.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         calcular.setText("CALCULAR");
@@ -67,7 +67,7 @@ public class bancolombia extends javax.swing.JFrame {
                 calcularActionPerformed(evt);
             }
         });
-        getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
+        getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
 
         interes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,16 +90,16 @@ public class bancolombia extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, -1, -1));
 
         jLabel7.setText("Cuota mesual con interes:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
 
         jLabel2.setText("Valor del credito:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
 
         jLabel5.setText("Valor total del credito:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
         getContentPane().add(valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 159, -1));
 
         jLabel3.setText("Meses a diferir el credito: ");
@@ -121,7 +121,7 @@ public class bancolombia extends javax.swing.JFrame {
                 mesesActionPerformed(evt);
             }
         });
-        getContentPane().add(meses, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 159, -1));
+        getContentPane().add(meses, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 159, -1));
 
         destino.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Educativo", "Vehiculo", "Vivienda", "Libre inversion" }));
         destino.addActionListener(new java.awt.event.ActionListener() {
@@ -136,13 +136,13 @@ public class bancolombia extends javax.swing.JFrame {
                 totalmActionPerformed(evt);
             }
         });
-        getContentPane().add(totalm, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 158, -1));
+        getContentPane().add(totalm, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 158, -1));
 
         iconc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/bancolom.png"))); // NOI18N
         getContentPane().add(iconc, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 290, 70));
 
         fondoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/bancocolo.jpg"))); // NOI18N
-        getContentPane().add(fondoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(-590, -410, -1, -1));
+        getContentPane().add(fondoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(-580, -400, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

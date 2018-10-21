@@ -5,6 +5,8 @@
  */
 package credito_interfaz;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author HAN
@@ -17,7 +19,11 @@ public class social extends javax.swing.JFrame {
     public social() {
         initComponents();
          this.setLocationRelativeTo(null);
+         inicio ventanauno =new inicio();
+         nombre.setText(ventanauno.n);
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -29,6 +35,22 @@ public class social extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        interes = new javax.swing.JLabel();
+        meses = new javax.swing.JTextField();
+        credito = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        opcion = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        fija = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        total = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        nombre = new javax.swing.JLabel();
         fondos = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -37,11 +59,157 @@ public class social extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/caja social.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, -1, 90));
 
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel3.setText("Meses a diferir");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 100, -1));
+
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel4.setText("Total");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 100, -1));
+
+        jLabel5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel5.setText("Valor del credito");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 100, 20));
+
+        interes.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        getContentPane().add(interes, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 130, 20));
+
+        meses.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        meses.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mesesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(meses, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 160, -1));
+
+        credito.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        credito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                creditoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(credito, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 160, -1));
+
+        jButton1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton1.setText("evaluar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 130, -1));
+
+        opcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Educativo", "Vehiculo", "Vivienda", "Libre inversion" }));
+        opcion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opcionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(opcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 160, 30));
+
+        jLabel6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel6.setText("Tipo de inversion: ");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 100, -1));
+
+        fija.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        getContentPane().add(fija, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 150, 20));
+
+        jLabel8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel8.setText("Interes");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 100, -1));
+
+        total.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        getContentPane().add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 150, 20));
+
+        jLabel10.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel10.setText("Cuota");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 100, -1));
+
+        jButton2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton2.setText("Reestablecer");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, -1, -1));
+
+        jButton3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton3.setText("Salir");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 430, -1, -1));
+
+        nombre.setText("nombre");
+        getContentPane().add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, -1, -1));
+
         fondos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/cajasocial1.jpg"))); // NOI18N
         getContentPane().add(fondos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 521, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mesesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mesesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mesesActionPerformed
+
+    private void creditoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creditoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_creditoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
+        double c,m,i,tc,tm,ti;
+
+        c=Double.parseDouble(this.credito.getText());
+        m=Double.parseDouble(this.meses.getText());
+        
+
+        tc=c*(1+(0.1/100));
+        tm=tc/m;
+
+        total.setText(String.valueOf(tc));
+        fija.setText(String.valueOf(tm));
+        
+       
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void opcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opcionActionPerformed
+        // TODO add your handling code here:
+        String o=(String)opcion.getSelectedItem();
+        
+        if(o.equals("Vehiculo")){
+            interes.setText("0.98");
+        }else if(o.equals("Educativo")){
+            interes.setText("1.2");
+        }else if(o.equals("Libre inversion")){
+            interes.setText(("2.04"));
+        }else if(o.equals("Vivienda")){
+            interes.setText("1.45");
+        }else{
+            JOptionPane.showMessageDialog(null,"Debe selecionar el destino de su credito");
+
+        }
+                      
+    }//GEN-LAST:event_opcionActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        meses.setText(null);
+        fija.setText(null);
+        interes.setText(null);
+        credito.setText(null);
+        total.setText(null);
+        
+    
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,7 +247,23 @@ public class social extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField credito;
+    private javax.swing.JLabel fija;
     private javax.swing.JLabel fondos;
+    private javax.swing.JLabel interes;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JTextField meses;
+    private javax.swing.JLabel nombre;
+    private javax.swing.JComboBox<String> opcion;
+    private javax.swing.JLabel total;
     // End of variables declaration//GEN-END:variables
 }

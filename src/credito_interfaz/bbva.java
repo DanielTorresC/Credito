@@ -41,9 +41,9 @@ public class bbva extends javax.swing.JFrame {
         totalm = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        opcion = new javax.swing.JComboBox<>();
         iconp = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        opcion = new javax.swing.JComboBox<>();
         fondop = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -135,12 +135,6 @@ public class bbva extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 430, -1, -1));
 
-        iconp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/bbvaic.png"))); // NOI18N
-        getContentPane().add(iconp, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 490, 100));
-
-        jLabel1.setText("Destino del credito:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
-
         opcion.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         opcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Educativo", "Vehiculo", "Vivienda", "Libre inversion" }));
         opcion.addActionListener(new java.awt.event.ActionListener() {
@@ -150,8 +144,14 @@ public class bbva extends javax.swing.JFrame {
         });
         getContentPane().add(opcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, -1, -1));
 
+        iconp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/bbvaic.png"))); // NOI18N
+        getContentPane().add(iconp, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 490, 100));
+
+        jLabel1.setText("Destino del credito:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+
         fondop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/blue.png"))); // NOI18N
-        getContentPane().add(fondop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 540));
+        getContentPane().add(fondop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 490, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
