@@ -182,12 +182,12 @@
     <Component class="javax.swing.JLabel" name="iconp">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/credito_interfaz/pichin.png"/>
+          <Image iconType="3" name="/credito_interfaz/BBVA.jpg"/>
         </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="0" width="220" height="100"/>
+          <AbsoluteConstraints x="0" y="0" width="450" height="100"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -225,7 +225,7 @@
     <Component class="javax.swing.JLabel" name="fondop">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/credito_interfaz/pichin1.jpg"/>
+          <Image iconType="3" name="/credito_interfaz/bba.jpg"/>
         </Property>
       </Properties>
       <Constraints>

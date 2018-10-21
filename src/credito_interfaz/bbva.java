@@ -7,7 +7,7 @@ package credito_interfaz;
 
 /**
  *
- * @author HAN
+ * @author HAN,
  */
 public class bbva extends javax.swing.JFrame {
 
@@ -16,6 +16,7 @@ public class bbva extends javax.swing.JFrame {
      */
     public bbva() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -128,8 +129,8 @@ public class bbva extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 430, -1, -1));
 
-        iconp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/pichin.png"))); // NOI18N
-        getContentPane().add(iconp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 100));
+        iconp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/BBVA.jpg"))); // NOI18N
+        getContentPane().add(iconp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 100));
 
         jLabel1.setText("Destino del credito:");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
@@ -137,7 +138,7 @@ public class bbva extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione...", "Educativo", "Vehiculo", "Vivienda", "Libre inversion" }));
         getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, -1, -1));
 
-        fondop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/pichin1.jpg"))); // NOI18N
+        fondop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/bba.jpg"))); // NOI18N
         getContentPane().add(fondop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 540));
 
         pack();
