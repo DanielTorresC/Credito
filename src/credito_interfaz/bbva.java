@@ -13,6 +13,7 @@ public class bbva extends javax.swing.JFrame {
     public bbva() {
         initComponents();
         this.setLocationRelativeTo(null);
+        //esto es una prueba
     }
 
     /**
