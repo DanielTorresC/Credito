@@ -107,7 +107,7 @@ public class inicio extends javax.swing.JFrame {
         }else{
             JOptionPane.showMessageDialog(null,"Usted es menor de edad, no puede acceder a un credito");
         }
-        //hola
+        
         
                 
     }//GEN-LAST:event_abrirActionPerformed
