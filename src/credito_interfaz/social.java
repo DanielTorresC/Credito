@@ -51,6 +51,7 @@ public class social extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         nombre = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
         fondos = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -146,6 +147,14 @@ public class social extends javax.swing.JFrame {
         nombre.setText("nombre");
         getContentPane().add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, -1, -1));
 
+        jButton4.setText("Contrato");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 100, -1));
+
         fondos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credito_interfaz/cajasocial1.jpg"))); // NOI18N
         getContentPane().add(fondos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 521, 490));
 
@@ -211,6 +220,10 @@ public class social extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -254,6 +267,7 @@ public class social extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
